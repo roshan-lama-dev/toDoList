@@ -1,0 +1,27 @@
+* {
+  box-sizing: border-box;
+}
+
+#task {
+  max-width: 500px;
+  text-align: justify;
+  overflow: hidden;
+}
+/* table {
+  table-layout: fixed;
+  border-collapse: collapse;
+}
+td {
+  background: #f00;
+  padding: 20px;
+  overflow: hidden;
+  white-space: nowrap;
+  width: 100px;
+  border: solid 1px #000;
+} */
+
+table {
+  background: rgba(19, 40, 76, 0.442);
+  border-radius: 5%;
+  box-shadow: 10, 10, 10;
+}

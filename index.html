@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <!-- boostrap cdn
+     -->
+    <!-- CSS only -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+      integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <title>To do List Application</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="container">
+        <!-- Text header section -->
+        <div class="row">
+          <div class="col text-center py-5">
+            <h1>To Do List</h1>
+          </div>
+        </div>
+
+        <!-- Input field section -->
+        <form action="javascript:void(0)" onsubmit="handleOnSubmit(this)">
+          <div class="row text-center">
+            <div class="col">
+                <label class="form-label">
+                   Enter your Task 
+                </label>
+              <input
+                name="task"
+                type="text"
+                class="form-control"
+                placeholder="Enter your task"
+                required
+              />
+            </div>
+            <div class="col">
+                <label class="form-label">
+                    Enter your Hours 
+                 </label>
+              <input
+                type="number"
+                name="hour"
+                class="form-control"
+                min="1"
+                required
+              />
+            </div>
+            <div class="col pt-4" >
+               
+              <button class="btn btn-success">Add Task</button>
+            </div>
+          </div>
+        </form>
+        <!-- Task display section -->
+        <div class="row text-center py-5">
+          <div class="col py-3">
+            New task
+            <table class="table table-striped">
+              <thead>
+                <tr>
+                  <th >S.N</th>
+                  <th >Task</th>
+                  <th >Hours Allocated</th>
+                  <th >Move</th>
+                  <th >Delete</th>
+                </tr>
+                <!-- give the id to tr instead to constantly show the data -->
+                
+              </thead>
+              <thead id="list-view">
+                   </thead>
+            </table>
+            <div id="hideMessage">
+            <p>There is no task to do. Please enter the tasks</p>
+            <button class="btn btn-primary" type="button" disabled>
+                <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+                Please Add Tasks
+              </button>
+            </div>
+          </div>
+          <div class="col py-3">
+            Finished task
+
+            <table class="table table-striped">
+              <thead id="">
+                <tr>
+                    <th scope="col">S.N</th>
+                    <th scope="col">Task</th>
+                    <th scope="col">Hours Allocated</th>
+                    <th scope="col">Move</th>
+                    <th scope="col">Delete</th>
+                  </tr>
+                  <!-- give the id to tr instead to constantly show the data -->
+                  <thead id="finished-list">
+
+                  </thead>
+                </thead>
+              </thead>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
