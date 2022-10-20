@@ -1,5 +1,7 @@
 * {
   box-sizing: border-box;
+  font-family: "Familjen Grotesk", sans-serif;
+  font-family: "Roboto", sans-serif;
 }
 
 #task {
@@ -17,7 +19,7 @@ body {
   table-layout: fixed;
   border-collapse: collapse;
 }
-td {
+/* td {
   background: #f00;
   padding: 20px;
   overflow: hidden;
@@ -25,9 +27,14 @@ td {
   width: 100px;
   border: solid 1px #000;
 } */
-
+*/ td {
+  font-size: bold;
+}
 table {
   background: rgba(19, 40, 76, 0.442);
   border-radius: 5%;
   box-shadow: 10, 10, 10;
+}
+
+.todo {
 }

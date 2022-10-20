@@ -21,6 +21,9 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Familjen+Grotesk&family=Roboto&display=swap" rel="stylesheet">
 
     <title>To do List Application</title>
   </head>
@@ -68,17 +71,17 @@
           </div>
         </form>
         <!-- Task display section -->
-        <div class="row text-center py-5">
-          <div class="col py-3">
-            New task
+        <div class="row text-center py-5  ">
+          <div class="row py-3 todo">
+           <div class="py-3"> New task</div>
             <table class="table table-striped">
               <thead>
                 <tr>
                   <th >S.N</th>
                   <th >Task</th>
                   <th >Hours Allocated</th>
-                  <th >Move</th>
-                  <th >Delete</th>
+                  <th >Move To Done</th>
+                  <th >Delete Task</th>
                 </tr>
                 <!-- give the id to tr instead to constantly show the data -->
                 
@@ -89,13 +92,15 @@
             <div id="hideMessage">
             <p>There is no task to do. Please enter the tasks</p>
             <button class="btn btn-primary" type="button" disabled>
-                <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+               
                 Please Add Tasks
               </button>
             </div>
           </div>
-          <div class="col py-3">
-            Finished task
+          <!-- finished task display -->
+         <div class="" id="finshedTaskDisplay">
+          <div class="row py-3">
+            <div class="py-3"> Finished task</div>
 
             <table class="table table-striped">
               <thead id="">
@@ -103,8 +108,8 @@
                     <th scope="col">S.N</th>
                     <th scope="col">Task</th>
                     <th scope="col">Hours Allocated</th>
-                    <th scope="col">Move</th>
-                    <th scope="col">Delete</th>
+                    <th scope="col">Move To Not Done</th>
+                    <th scope="col">Delete Task</th>
                   </tr>
                   <!-- give the id to tr instead to constantly show the data -->
                   <thead id="finished-list">
@@ -114,6 +119,7 @@
               </thead>
             </table>
           </div>
+         </div>
         </div>
       </div>
     </div>
