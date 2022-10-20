@@ -30,7 +30,7 @@ const handleOnSubmit = (e) => {
 };
 
 // display function to display the content dynamically
-const listDisplay = () => {
+const listDisplay = (deletedArray) => {
   let str = "";
 
   taskToDoArg.map((item, index) => {
@@ -59,7 +59,12 @@ const transferArray = (index) => {
   listDisplay();
   finishedDisplay();
 };
-const deleteTask = (index) => {};
+const deleteTask = (index) => {
+  // alert("Delete is pressed");
+  taskToDoArg = taskToDoArg.filter((item, i) => !index == i);
+  listDisplay();
+  finishedDisplay();
+};
 
 // display function to display the content dynamically
 const finishedDisplay = () => {
